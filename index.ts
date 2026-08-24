@@ -10,7 +10,7 @@ export default function contribute(plugin: PluginContext) {
       foreground: "#657b83",
       raised: "#eee8d5",
       control: "#eee8d5",
-      border: "#93a1a1",
+      border: "#e6e0cd",
       accent: "#cb4b16",
       mutedForeground: "#839496",
       ring: "#586e75",
