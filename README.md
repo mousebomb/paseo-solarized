@@ -1,5 +1,7 @@
 # Paseo Solarized Light 主题插件
 
+[English](README.en.md) | 中文
+
 为 [Paseo](https://github.com/getpaseo/paseo) 移植的 **Solarized Light** 应用主题，低对比度、柔和护眼，适合长期盯着屏幕的编程场景。
 
 本插件通过 Paseo 官方的插件主题贡献点（`plugin.addTheme`，随 v0.5.0 引入）实现，**无需修改 Paseo 任何文件**，升级不丢失。
