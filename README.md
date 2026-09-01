@@ -1,6 +1,6 @@
 # Paseo Solarized Light 主题插件
 
-为 [Paseo](https://github.com/getpaseo/paseo) 贡献的 **Solarized Light** 应用主题，低对比度、柔和护眼，适合长期盯着屏幕的编程场景。
+为 [Paseo](https://github.com/getpaseo/paseo) 移植的 **Solarized Light** 应用主题，低对比度、柔和护眼，适合长期盯着屏幕的编程场景。
 
 本插件通过 Paseo 官方的插件主题贡献点（`plugin.addTheme`，随 v0.5.0 引入）实现，**无需修改 Paseo 任何文件**，升级不丢失。
 
@@ -11,27 +11,36 @@
 
 ## 环境要求
 
-- Paseo **0.5.1** 或更高版本（`addTheme` 于 0.5.0 引入，更低版本会报 `plugin.addTheme is not a function`）
-- Node.js 22+
+- Paseo **0.5.0** 或更高版本（Git 仓库安装需 0.7.0，`addTheme` 于 0.5.0 引入）
+- Node.js 22+（仅源码目录安装需要）
 
 ## 安装
 
-### 本机安装（源码目录）
+### 方式1️⃣：从 Git 仓库安装（推荐，Paseo 0.7.0+）
 
 ```bash
-cd /Users/rhett/MyWork/2026/paseo-solarized-light
+paseo plugin add mousebomb/paseo-solarized-light
+paseo plugin update solarized-light   # 更新到最新
+paseo plugin status solarized-light   # 查看版本状态
+```
+
+### 方式2️⃣:源码目录安装（开发迭代用，Paseo 0.5.0+）
+
+```bash
+git clone https://github.com/mousebomb/paseo-solarized-light.git
+cd paseo-solarized-light
 npm install
 npm run typecheck
 
 # 安装到 Paseo daemon
-paseo plugin install /Users/rhett/MyWork/2026/paseo-solarized-light
+paseo plugin install /path/to/paseo-solarized-light
 paseo reload
 ```
 
 如果 `paseo` 命令不在 PATH，用完整路径：
 
 ```bash
-/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install /Users/rhett/MyWork/2026/paseo-solarized-light
+/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install /path/to/paseo-solarized-light
 /Applications/Paseo.app/Contents/Resources/bin/paseo reload
 ```
 
@@ -40,9 +49,9 @@ paseo reload
 1. 打开 Paseo → **Settings → Plugins** → 打开 **Enable plugins**（全局开关）
 2. **Settings → Appearance** → Theme 选择 **Solarized Light**
 
-![SCR-20260824-iouc](README.assets/SCR-20260824-iouc.png)
+![image-20260902062537168](README.assets/image-20260902062537168.png)
 
-![SCR-20260824-iovg](README.assets/SCR-20260824-iovg.png)
+![image-20260902062342515](README.assets/image-20260902062342515.png)
 
 ## 使用
 
