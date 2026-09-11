@@ -1,3 +1,6 @@
 {
-  "id": "solarized-light"
+  "id": "solarized-light",
+  "requirements": {
+    "paseo": ">=0.8.0"
+  }
 }

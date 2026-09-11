@@ -1,7 +1,7 @@
-import type { PluginContext } from "@getpaseo/plugin";
+import type { PluginClientContext } from "@getpaseo/plugin/client";
 
-export default function contribute(plugin: PluginContext) {
-  plugin.addTheme({
+export default function contribute(client: PluginClientContext) {
+  client.addTheme({
     id: "solarized-light",
     name: "Solarized Light",
     appearance: "light",

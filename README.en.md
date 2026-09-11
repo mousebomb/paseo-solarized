@@ -4,7 +4,7 @@
 
 A **Solarized Light** application theme for [Paseo](https://github.com/getpaseo/paseo). Low-contrast and easy on the eyes, ideal for long coding sessions.
 
-Implemented through Paseo's official plugin theme contribution point (`plugin.addTheme`, introduced in v0.5.0). **No modification of Paseo's own files required** — safe across upgrades.
+Implemented through Paseo's official plugin theme contribution point (`client.addTheme`; theme support was introduced in v0.5.0, and v0.8.0 moved plugins to split client/server entries). **No modification of Paseo's own files required** — safe across upgrades.
 
 ## Palette
 
@@ -12,12 +12,12 @@ Based on [Solarized](https://ethanschoonover.com/solarized) by Ethan Schoonover 
 
 ## Requirements
 
-- Paseo **0.5.0** or later (Git install requires **0.7.0**; `addTheme` introduced in 0.5.0)
+- Paseo **0.8.0** or later (`paseo-plugin.json` declares `requirements.paseo >=0.8.0`, so the plugin no longer runs on pre-0.8 hosts)
 - Node.js 22+ (only needed for the source-directory install)
 
 ## Install
 
-### Option 1: Install from Git repository (recommended, Paseo 0.7.0+)
+### Option 1: Install from Git repository (recommended, Paseo 0.8.0+)
 
 ```bash
 paseo plugin add mousebomb/paseo-solarized-light
@@ -25,7 +25,7 @@ paseo plugin update solarized-light   # update to the latest
 paseo plugin status solarized-light   # check version status
 ```
 
-### Option 2: Source-directory install (for development, Paseo 0.5.0+)
+### Option 2: Source-directory install (for development, Paseo 0.8.0+)
 
 ```bash
 git clone https://github.com/mousebomb/paseo-solarized-light.git

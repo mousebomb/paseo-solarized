@@ -4,7 +4,7 @@
 
 为 [Paseo](https://github.com/getpaseo/paseo) 移植的 **Solarized Light** 应用主题，低对比度、柔和护眼，适合长期盯着屏幕的编程场景。
 
-本插件通过 Paseo 官方的插件主题贡献点（`plugin.addTheme`，随 v0.5.0 引入）实现，**无需修改 Paseo 任何文件**，升级不丢失。
+本插件通过 Paseo 官方的插件主题贡献点（`client.addTheme`；主题能力自 v0.5.0 引入，v0.8.0 起插件改用 client/server 分离入口）实现，**无需修改 Paseo 任何文件**，升级不丢失。
 
 ## 色板
 
@@ -13,12 +13,12 @@
 
 ## 环境要求
 
-- Paseo **0.5.0** 或更高版本（Git 仓库安装需 0.7.0，`addTheme` 于 0.5.0 引入）
+- Paseo **0.8.0** 或更高版本（`paseo-plugin.json` 声明 `requirements.paseo >=0.8.0`，插件不再兼容 0.8 以下 host）
 - Node.js 22+（仅源码目录安装需要）
 
 ## 安装
 
-### 方式1️⃣：从 Git 仓库安装（推荐，Paseo 0.7.0+）
+### 方式1️⃣：从 Git 仓库安装（推荐，Paseo 0.8.0+）
 
 ```bash
 paseo plugin add mousebomb/paseo-solarized-light
@@ -26,7 +26,7 @@ paseo plugin update solarized-light   # 更新到最新
 paseo plugin status solarized-light   # 查看版本状态
 ```
 
-### 方式2️⃣:源码目录安装（开发迭代用，Paseo 0.5.0+）
+### 方式2️⃣:源码目录安装（开发迭代用，Paseo 0.8.0+）
 
 ```bash
 git clone https://github.com/mousebomb/paseo-solarized-light.git
