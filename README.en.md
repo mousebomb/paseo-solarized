@@ -31,7 +31,13 @@ Two deliberate deviations: the dark theme uses base0 for body text (base00 only 
 
 ## Install
 
-### Option 1: Install from Git repository (recommended, Paseo 0.8.0+)
+### Option 1: Install from npm (Paseo 0.9+)
+
+```bash
+paseo plugin add npm:@mousebomb/paseo-solarized@0.1.0
+```
+
+### Option 2: Install from Git repository (Paseo 0.8.0+)
 
 ```bash
 paseo plugin add mousebomb/paseo-solarized
@@ -46,7 +52,7 @@ If `paseo` is not on your PATH, use the full path:
 /Applications/Paseo.app/Contents/Resources/bin/paseo reload
 ```
 
-### Option 2: Source-directory install (for development, Paseo 0.8.0+)
+### Option 3: Source-directory install (for development, Paseo 0.8.0+)
 
 ```bash
 git clone https://github.com/mousebomb/paseo-solarized.git

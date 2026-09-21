@@ -31,7 +31,13 @@ https://github.com/user-attachments/assets/d5a20398-b03c-4917-ac1c-a6994813662b
 
 ## 安装
 
-### 方式1️⃣：从 Git 仓库安装（推荐，Paseo 0.8.0+）
+### 方式1️⃣：从 npm 安装（Paseo 0.9+）
+
+```bash
+paseo plugin add npm:@mousebomb/paseo-solarized@0.1.0
+```
+
+### 方式2️⃣：从 Git 仓库安装（Paseo 0.8.0+）
 
 ```bash
 paseo plugin add mousebomb/paseo-solarized
@@ -46,7 +52,7 @@ paseo plugin status solarized   # 查看版本状态
 /Applications/Paseo.app/Contents/Resources/bin/paseo reload
 ```
 
-### 方式2️⃣:源码目录安装（开发迭代用，Paseo 0.8.0+）
+### 方式3️⃣：源码目录安装（开发迭代用，Paseo 0.8.0+）
 
 ```bash
 git clone https://github.com/mousebomb/paseo-solarized.git

@@ -1,7 +1,33 @@
 {
-  "name": "paseo-solarized",
-  "private": true,
+  "name": "@mousebomb/paseo-solarized",
   "version": "0.1.0",
+  "type": "module",
+  "description": "Solarized light and dark themes for Paseo.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mousebomb/paseo-solarized.git"
+  },
+  "homepage": "https://github.com/mousebomb/paseo-solarized#readme",
+  "bugs": {
+    "url": "https://github.com/mousebomb/paseo-solarized/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "paseo",
+    "paseo-plugin",
+    "solarized",
+    "theme",
+    "color-scheme"
+  ],
+  "files": [
+    "index.client.ts",
+    "paseo-plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
