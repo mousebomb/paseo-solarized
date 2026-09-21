@@ -6,6 +6,8 @@ A **Solarized Light** application theme for [Paseo](https://github.com/getpaseo/
 
 Implemented through Paseo's official plugin theme contribution point (`client.addTheme`; theme support was introduced in v0.5.0, and v0.8.0 moved plugins to split client/server entries). **No modification of Paseo's own files required** — safe across upgrades.
 
+https://github.com/user-attachments/assets/d5a20398-b03c-4917-ac1c-a6994813662b
+
 ## Palette
 
 Based on [Solarized](https://ethanschoonover.com/solarized) by Ethan Schoonover (MIT License, see `NOTICE`).
@@ -25,6 +27,13 @@ paseo plugin update solarized-light   # update to the latest
 paseo plugin status solarized-light   # check version status
 ```
 
+If `paseo` is not on your PATH, use the full path:
+
+```bash
+/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install mousebomb/paseo-solarized-light
+/Applications/Paseo.app/Contents/Resources/bin/paseo reload
+```
+
 ### Option 2: Source-directory install (for development, Paseo 0.8.0+)
 
 ```bash
@@ -41,7 +50,7 @@ paseo reload
 If `paseo` is not on your PATH, use the full path:
 
 ```bash
-/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install mousebomb/paseo-solarized-light
+/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install /path/to/paseo-solarized-light
 /Applications/Paseo.app/Contents/Resources/bin/paseo reload
 ```
 

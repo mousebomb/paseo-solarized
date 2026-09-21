@@ -6,6 +6,8 @@
 
 本插件通过 Paseo 官方的插件主题贡献点（`client.addTheme`；主题能力自 v0.5.0 引入，v0.8.0 起插件改用 client/server 分离入口）实现，**无需修改 Paseo 任何文件**，升级不丢失。
 
+https://github.com/user-attachments/assets/d5a20398-b03c-4917-ac1c-a6994813662b
+
 ## 色板
 
 基于 Ethan Schoonover 的 [Solarized](https://ethanschoonover.com/solarized) 配色（MIT License，见 `NOTICE`）：
@@ -26,6 +28,13 @@ paseo plugin update solarized-light   # 更新到最新
 paseo plugin status solarized-light   # 查看版本状态
 ```
 
+如果 `paseo` 命令不在 PATH，用完整路径：
+
+```bash
+/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install mousebomb/paseo-solarized-light
+/Applications/Paseo.app/Contents/Resources/bin/paseo reload
+```
+
 ### 方式2️⃣:源码目录安装（开发迭代用，Paseo 0.8.0+）
 
 ```bash
@@ -42,7 +51,7 @@ paseo reload
 如果 `paseo` 命令不在 PATH，用完整路径：
 
 ```bash
-/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install mousebomb/paseo-solarized-light
+/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install /path/to/paseo-solarized-light
 /Applications/Paseo.app/Contents/Resources/bin/paseo reload
 ```
 
