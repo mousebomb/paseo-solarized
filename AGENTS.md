@@ -76,6 +76,15 @@ paseo plugin reload solarized && paseo plugin ls
 
 ⚠️ 改了 `paseo-plugin.json` 的 `id` 后 `reload` 不会换前缀：daemon 用配置键当插件 id（`loadDirectoryPlugin` 的 `id: pluginId`），必须 `paseo plugin remove <旧键>` 再 `paseo plugin install <目录>` 才会以新 id 注册。
 
+## paseo.cafe 收录
+
+- 收录入口：PR 新增 `registry/<id>.json`（文件名必须等于插件 `paseo-plugin.json` 的 `id`），或在官方 issue 表单提交（自动建 PR，npm package 字段必填）。
+- ⚠️ **新条目强制要求声明公开 npm 包**：`scripts/plugin-security/targets.ts` 对 `!previous && !baseIds.has(id) && !entry.package` 直接抛 `new registry entry "<id>" must declare a public npm package`。git-only 仅对规则生效前已存在的历史条目（`gruvbox`、`catppuccin-theme`）有效，新插件走不通。
+- `package.json` 的 `version` 不能是 `0.0.0`（`scripts/scan.ts` 判定为占位符并写入 scanErrors），且仓库 version、npm 已发布 version、registry 声明必须三者一致。
+- 发布包内必须带 `paseo-plugin.json` + `index.client.ts`（纯数据主题无需 build），参考 `@omercnet/paseo-dracula` 的 `files` 字段。
+- 本机 `~/.npmrc` 指向 npmmirror（只读镜像，不支持发布），发布必须显式指定 `--registry=https://registry.npmjs.org`，否则 paseo.cafe 的校验在 npmjs 上查不到包。
+- 本插件发布步骤：`npm publish --registry=https://registry.npmjs.org --access public`，包名 `@mousebomb/paseo-solarized`。
+
 ## 开发日志
 
 每次修改后更新 `devlog/`（格式：`YYYYMMDD-<简述>.md`），记录用户需求、问题定位、最终方案。
