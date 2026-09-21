@@ -41,7 +41,7 @@ paseo reload
 If `paseo` is not on your PATH, use the full path:
 
 ```bash
-/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install /path/to/paseo-solarized-light
+/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install mousebomb/paseo-solarized-light
 /Applications/Paseo.app/Contents/Resources/bin/paseo reload
 ```
 

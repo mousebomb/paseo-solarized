@@ -42,7 +42,7 @@ paseo reload
 如果 `paseo` 命令不在 PATH，用完整路径：
 
 ```bash
-/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install /path/to/paseo-solarized-light
+/Applications/Paseo.app/Contents/Resources/bin/paseo plugin install mousebomb/paseo-solarized-light
 /Applications/Paseo.app/Contents/Resources/bin/paseo reload
 ```
 
