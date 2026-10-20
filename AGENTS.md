@@ -29,20 +29,22 @@ v0.8 起插件拆分 client/server 运行时入口，废弃混合根入口 `inde
 
 ## 插件主题字段与 Unistyles 色板映射
 
-插件只贡献 8 个字段（0.5.1 时点源码 `src/plugins/themes/index.ts:63-71`），Paseo 内部映射到完整色板：
+插件只贡献 8 个字段（0.12.0 源码 `packages/app/src/plugins/themes/index.ts`），Paseo 内部映射到完整色板：
 
 | 插件字段 | 映射 | 主要用途 |
 |---|---|---|
 | `background` | `surface0` | 页面背景 |
 | `raised` | `surface1` | 次要凸起层 |
-| `control` | `surface2` | 控件背景 |
+| `control` | `surface2` | 控件背景（浅色端侧边栏背景） |
 | **`border`** | **`surface3`** | **用户消息气泡背景** + 卡片/控件背景 + 边框线 |
-| `mutedForeground` | `foregroundMuted` | 次要文字（时间戳、辅助说明） |
+| `mutedForeground` | `foregroundMuted` | 次要文字（辅助说明） |
 | `accent` | `accent` | 强调色 |
 | `foreground` | `foreground` | 正文文字 |
-| `ring` | - | 焦点环 |
+| `ring` | `surface4` + `foregroundExtraMuted` + `terminalBrightBlack` | 侧边栏时间戳、滚动条、终端 bright black；**0.12.0 起 surface4 还用于浅色侧边栏选中行** |
 
-⚠️ 关键约束：**用户消息气泡背景被绑死在 `border` 字段**（0.5.1 时点源码 `src/components/message.tsx:347` 的 `backgroundColor: theme.colors.surface3`），气泡内文字是 `foreground`（`message.tsx:356`）。无法单独改气泡颜色，只能调 `border`。
+⚠️ 关键约束 1：**用户消息气泡背景被绑死在 `border` 字段**（0.5.1 时点源码 `src/components/message.tsx:347` 的 `backgroundColor: theme.colors.surface3`），气泡内文字是 `foreground`（`message.tsx:356`）。无法单独改气泡颜色，只能调 `border`。
+
+⚠️ 关键约束 2（0.12.0 上游回归，[issue #7471](https://github.com/getpaseo/paseo/issues/7471)）：`buildLightSemanticColors` 的 `surfaceSidebarSelected` 从 `surface3` 改为 `surface4`，而插件主题的 `surface4` 绑的是 `ring`。浅色主题的 `ring` 是深色前景，选中行因此变成深底深字（Solarized Light 仅 1.21:1）；同一 token 还污染 composer placeholder（`composer/input/input.tsx`）与 usage meter 的 `fillQuiet`（`usage/meter.tsx`）。8 色契约内无解，等上游修复。深色端选中行用 `surface2`，不受影响。
 
 ## 配色规则经验
 
